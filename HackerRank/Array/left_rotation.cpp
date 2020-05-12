@@ -1,24 +1,27 @@
+/* https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays
+	Left Rotation */
+
 #include<iostream>
 #include<vector>
 using namespace std;
 vector<int> left(vector<int> a,int d)
 {
-	int i,temp,temp1,len;
-	i=0;
+    int i,temp,temp1,len;
+    i=0;
     int n=a.size();
     if(n%2!=0||d!=n/2)
     {
         temp=a[d];
-	    for(len=0;len<n;len++)
-	    {
-		    temp1=temp;
-	    	temp=a[i];
-		    a[i]=temp1;
-		    if(i<d)
-			    i=n-(d-i);
-		    else
-			    i=i-d;
-	    }
+	for(len=0;len<n;len++)
+	{
+	    temp1=temp;
+	    temp=a[i];
+            a[i]=temp1;
+            if(i<d)
+		i=n-(d-i);
+	    else
+		i=i-d;
+	}
     }
     else   
     {
