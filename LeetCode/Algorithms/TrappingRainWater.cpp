@@ -1,5 +1,5 @@
 /* https://leetcode.com/problems/trapping-rain-water/submissions/
-    Trapping Rain Water  */
+    42. Trapping Rain Water  */
 
 class Solution {
 public:
